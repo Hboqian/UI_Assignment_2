@@ -23,6 +23,14 @@ select{
 .first_row{
     display: block;
 }
+
+.placeholder_center{
+    margin:2.5em;
+    justify-content: center;
+    text-align: center;
+    color:#8f8f8f
+}
+
 .center{
     margin:auto;
     width:fit-content;
@@ -58,7 +66,7 @@ select{
     margin-top: 50px;
     width: 50em;
     border-radius: 10px;
-    box-shadow:10px;
+    box-shadow:0.1px 0.1px 10px 0.1px;
     padding:2em;
     padding-bottom:1em;
 }

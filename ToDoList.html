@@ -3,6 +3,8 @@
     <head>
         <!-- Link to CSS -->
         <link rel="stylesheet" type="text/css" href="todo_style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="todo.js"></script>
     </head>
     <body>
         <div class="container">
@@ -15,67 +17,21 @@
                     Add
                 </button>
             </div>
-            
             <div class="row">
-                <select>
+                <select id="select">
                     <option>
-                        Leo
-                    </option>
-                    <option>
-                        Arnavi
-                    </option>
-                    <option>
-                        Laura
+                        Assign to
                     </option>
                 </select>
                 <input class="task_input" type="text" placeholder="Task">
-                <input class="date_input" type="text" value="09/01/2009">
+                <input class="date_input" type="text" placeholder="09/01/2009">
                 <button class="assign">
                     Assign
                 </button>
             </div>
             <hr>
-            <div class="second_heading">
-                Arnavi
-            </div>
-
-            <div class="task">
-                Set up Flask server
-                <span class="right">
-                    Due: 2099-10-01
-                    <input type="checkbox">
-                </span>
-            </div>
-
-            <div class="task">
-                Set up Git Repo
-                <span class="right">
-                    Due: 2099-10-01
-                    <input type="checkbox">
-                </span>
-            </div>
-
-            <div class="second_heading">
-                Laura
-            </div>
-
-            <div class="task">
-                Draft weekly plan
-                <span class="right">
-                    Due: 2099-10-01
-                    <input type="checkbox">
-                </span>
-            </div>
-
-            <div class="second_heading">
-                Leo
-            </div>
-            <div class="task">
-                Set up Flask server
-                <span class="right">
-                    Due: 2099-10-01
-                    <input type="checkbox">
-                </span>
+            <div class="placeholder_center">
+                No Tasks right now. Please add a teammate and assign a task.
             </div>
             <hr>
             <div class="center">
