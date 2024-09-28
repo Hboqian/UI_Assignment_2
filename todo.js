@@ -300,10 +300,15 @@ function updateOptions(){
 
 function updateTasks(){
     let checkbox_index = 0
+    let prev_name = ""
+
     sorted_teammate_names.forEach(name => {
         let items = teammate_items[name]
-
+        console.log(name, items)
         if (items.length > 0){
+            console.log("I am running for: ", name)
+            console.log("Prev Name: ", prev_name)
+
             let container = ($('<div>').attr({'id' : name.replace(/\s+/g, '_')}))
             container.append($('<div>').text(name).attr({
                 'class' : 'second_heading'
@@ -312,6 +317,9 @@ function updateTasks(){
             if ($('.placeholder_center').length){
                 container.insertAfter($('.placeholder_center'))
                 $(".placeholder_center").remove()
+            }
+            else{
+                container.insertAfter($("#" + prev_name.replace(/\s+/g, '_')))
             }
         
             items.forEach(item => {
@@ -330,8 +338,8 @@ function updateTasks(){
                 container.append(task_content)
             })
         }
+        prev_name = name
     })
-
 }
 
 $(document).ready(function(){    
